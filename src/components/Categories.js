@@ -11,7 +11,6 @@ const Categories = () => {
     axios
       .get(`${apiUrl}/api/products`)
       .then(res => {
-        console.log(res)
         setCategories(res.data.countByCategory)
       })
       .catch(err => {

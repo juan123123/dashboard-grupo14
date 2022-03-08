@@ -1,2 +1,2 @@
 
-export const apiUrl = 'http://localhost:3500'
+export const apiUrl = 'https://evening-shelf-10057.herokuapp.com'

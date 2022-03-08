@@ -12,7 +12,6 @@ const Products = () => {
     axios
       .get(`${apiUrl}/api/products`)
       .then(res => {
-        console.log(res)
         setProducts(res.data.products)
       })
       .catch(err => {
