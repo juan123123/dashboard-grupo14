@@ -1,38 +1,233 @@
-.App {
+.hamburguer {
+  height: 50px;
+  width: 100px;
+  position: fixed;
+  z-index: 5;
+  width: 90%;
+  padding-left: 20px;
+}
+
+.hamburguer img {
+  cursor: pointer;
+  width: 70px;
+}
+
+.box {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.hide_header {
+  transform: translateX(-150px);
+  transition: all 0.5s ease;
+  position: fixed;
+}
+
+.header {
+  background-color: #3E3B41;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  color: white;
+  position: fixed;
+  transition: all 1s ease;
+  width: 100px;
+  bottom: 0px;
+  top: 0;
+  z-index: 2;
+  -webkit-box-shadow: 0px 10px 40px -19px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 40px -19px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 40px -19px rgba(0,0,0,0.75);
+}
+
+header img {
+  width: 70px;
+}
+
+header p {
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+header p:hover {
+  opacity: 1;
+}
+
+.section-one {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.basic-card {
+  width: 100%;
+  min-height: 150px;
+  max-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  gap: 10px;
+  border: 5px solid #E7E7E7;
+  background-color: white;
+  -webkit-box-shadow: 7px 7px 33px -14px rgba(0,0,0,0.63);
+  -moz-box-shadow: 7px 7px 33px -14px rgba(0,0,0,0.63);
+  box-shadow: 7px 7px 33px -14px rgba(0,0,0,0.63);
+}
+
+.basic-card h1 {
+  font-size: 22px;
+  display: flex;
+  height: 100%;
+}
+
+.basic-card p {
+  font-size: 30px;
+}
+
+.section-two {
+  margin-top: 30px;
+  padding: 20px;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.product {
+  width: 90%;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: white;
+  gap: 10px;
+  border: 5px solid #E7E7E7;
+  padding: 20px;
+  max-height: 700px;
+  -webkit-box-shadow: 7px 7px 33px -14px rgba(0,0,0,0.63);
+  -moz-box-shadow: 7px 7px 33px -14px rgba(0,0,0,0.63);
+  box-shadow: 7px 7px 33px -14px rgba(0,0,0,0.63);
 }
 
-.App-link {
-  color: #61dafb;
+.product img {
+  width: 90%;
+  max-width: 900px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.product h1 {
+  font-size: 27px;
+}
+
+.product h2 {
+  font-size: 19px;
+}
+
+.product span {
+  color: rgb(88, 80, 80);
+}
+
+.product p {
+  font-weight: 700;
+  font-size: 19px;
+}
+
+.categories-box {
+  width: 100%;
+}
+
+.categories {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  -webkit-box-shadow: 7px 7px 33px -14px rgba(0,0,0,0.63);
+  -moz-box-shadow: 7px 7px 33px -14px rgba(0,0,0,0.63);
+  box-shadow: 7px 7px 33px -14px rgba(0,0,0,0.63);
+}
+
+.categories-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  margin-top: 50px;
+  gap: 20px;
+  max-width: 500px;
+  padding: 20px;
+  width: auto;
+}
+
+/*Category box */
+.category {
+  width: auto;
+  padding: 20px;
+  width: 50%;
+  margin: 10px;
+  background-color: #E7E7E7;
+  border-radius: 7px;
+}
+
+
+
+/*Table Products*/
+.box-products {
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  width: 100vw;
+  min-width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-products table {
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin: 10px;
+  background-color: white;
+  border: 5px solid #E7E7E7;
+}
+
+td, th {
+  border: 2px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+
+/*Media queries*/
+@media screen and (max-width: 1000px){
+  .section-one {
+    flex-wrap: wrap;
   }
-  to {
-    transform: rotate(360deg);
+
+  .section-two {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .categories-box {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
